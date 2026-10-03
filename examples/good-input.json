@@ -1,0 +1,12 @@
+{
+  "backup_sets": [
+    "record-1"
+  ],
+  "retention_policy": "evidence-record",
+  "encryption_evidence": [
+    "record-1"
+  ],
+  "restore_tests": [
+    "record-1"
+  ]
+}

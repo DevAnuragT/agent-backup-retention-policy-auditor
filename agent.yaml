@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: backup-retention-policy-auditor
+version: 0.1.0
+description: Compare backup sets with declared retention, encryption, and restore evidence.
+skills:
+  - backup-retention-policy-auditor-skill
+tools:
+  - review-backup-retention-policy-auditor
+tags:
+  - cybersecurity
+  - evidence-driven

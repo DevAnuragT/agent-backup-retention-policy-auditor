@@ -1,0 +1,29 @@
+{
+  "slug": "backup-retention-policy-auditor",
+  "title": "Backup Retention Policy Auditor",
+  "category": "cybersecurity",
+  "description": "Compare backup sets with declared retention, encryption, and restore evidence.",
+  "fields": {
+    "backup_sets": {
+      "label": "backup sets",
+      "kind": "list",
+      "minimum": 1
+    },
+    "retention_policy": {
+      "label": "retention policy",
+      "kind": "required",
+      "minimum": 0
+    },
+    "encryption_evidence": {
+      "label": "encryption evidence",
+      "kind": "list",
+      "minimum": 1
+    },
+    "restore_tests": {
+      "label": "restore tests",
+      "kind": "list",
+      "minimum": 1
+    }
+  },
+  "limitations": "Uses caller-provided evidence only; cannot confirm external facts. Human review remains required."
+}

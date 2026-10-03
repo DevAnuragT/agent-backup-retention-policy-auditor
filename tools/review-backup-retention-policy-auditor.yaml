@@ -1,0 +1,59 @@
+{
+  "name": "review-backup-retention-policy-auditor",
+  "description": "Run Backup Retention Policy Auditor",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "backup_sets": {
+            "type": "array",
+            "description": "backup sets"
+          },
+          "retention_policy": {
+            "type": "string",
+            "description": "retention policy"
+          },
+          "encryption_evidence": {
+            "type": "array",
+            "description": "encryption evidence"
+          },
+          "restore_tests": {
+            "type": "array",
+            "description": "restore tests"
+          }
+        },
+        "required": [
+          "backup_sets",
+          "retention_policy",
+          "encryption_evidence",
+          "restore_tests"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-backup-retention-policy-auditor.py",
+    "runtime": "python3"
+  }
+}
